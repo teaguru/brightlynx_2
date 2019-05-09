@@ -1,12 +1,14 @@
-var result = document.getElementById('button');
+/**var result = document.getElementById('button');
 result.addEventListener('click',  generateEmptyBoard); //создадим обработчик
 
 function getN() {
     var getStart = document.getElementById('num_1').value;
-    getStart = getStart.split('');
-    alert(getStart);
+    //getStart = getStart.split('');
+    
+    return(getStart);
 
 }
+getStart = getN();
 function generateEmptyBoard() {
     var row = [];
     for(var i = 0; i < 120; i++) {
@@ -14,10 +16,41 @@ function generateEmptyBoard() {
             ? -1
             : i2an(i));
     }
-    return row;
+    console.log(row);
+    console.log(row[24]);= n=
 }
 
 // converts an index in the mailbox into its corresponding value in algebraic notation
 function i2an(i) {
-    alert("abcdefgh"[(i % 10) - 1] + (10 - Math.floor(i / 10)));
+    return("abcdefgh"[(i % 10) - 1] + (10 - Math.floor(i / 10)));
 }
+
+**/
+
+var result = document.getElementById('button');
+result.addEventListener('click',  getN); //создадим обработчик
+var getStart = document.getElementById('num_1').value;
+function getN() {
+    var getStart = document.getElementById('num_1').value;
+    getStart = getStart.split('');
+   
+    //var horseArr = [(), getStart[2]];
+if ((getStart[0] != null)&&(getStart[1] != null)) { 
+        x = true;
+    } else {
+     x = false; 
+         c
+}    
+var arr = [4, 6, 8, 12];
+console.log(arr.prototype.indexOf(6));
+  //console.log([a, b, c, d, e, f, g, h].findIndex(d));
+       //console.log(horseArr,getStart[1]);
+       //console.log(getStart);
+       //console.log('sdf');
+   }
+  
+
+
+
+
+                                                                                                                                                                                                                                                                  
