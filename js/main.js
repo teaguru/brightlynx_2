@@ -41,9 +41,9 @@ if ((getStart[0] != null)&&(getStart[1] != null)) {
      x = false; 
          c
 }    
-var arr = [4, 6, 8, 12];
-console.log(arr.prototype.indexOf(6));
-  //console.log([a, b, c, d, e, f, g, h].findIndex(d));
+var arr = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
+//console.log(arr.indexOf(6));
+console.log(arr.indexOf('d'));
        //console.log(horseArr,getStart[1]);
        //console.log(getStart);
        //console.log('sdf');
