@@ -48,7 +48,7 @@ check(tmpArr);
 var tmpArr = [num_1 + 1, num_2 - 2];
 check(tmpArr);
 
-console.log(answArr);
+alert(answArr.join(' '));
 
    }
   
