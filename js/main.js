@@ -6,47 +6,57 @@ var getStart = document.getElementById('num_1').value;
 function getN() {
     var getStart = document.getElementById('num_1').value;
     getStart = getStart.split('');
-    var arr = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']; //массив для перевода букв в цифры
+    var arr = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']; //массив для перевода букв в цифры
     num_1 = arr.indexOf(getStart[0]);
     num_2 = parseInt(getStart[1]);
-    var horseArr = [num_1, num_2];
     var answArr = [];
-    // function for check the turn
+
+// function for check the turn
     function check(){
-    if ((tmpArr[0] <= 7)&&(tmpArr[1]<= 8)&&(tmpArr[1] >= 1)&&(tmpArr[0] >= 1)) 
-    { answArr.push(arr[tmpArr[0]] + tmpArr[1]);}}
+        if (( tmpX <= 7)&&(tmpY <= 8)&&(tmpY >= 1)&& (tmpX >= 1)) 
+        {   
+            answArr.push(arr[tmpX] + tmpY);
+        }}
 
 //первый ход 
-    var tmpArr = [num_1 + 2, num_2 + 1];
-    check(tmpArr);
+    tmpX = (num_1 + 2),
+    tmpY = (num_2 + 1);
+    check(tmpX, tmpY);
 
 // второй ход 
- var tmpArr = [num_1 + 2, num_2 - 1];
-    check(tmpArr);
+    tmpX = (num_1 + 2); 
+    tmpY = (num_2 - 1);
+    check(tmpX, tmpY);
 
 // третий ход 
-var tmpArr = [num_1 - 2, num_2 + 1];
-check(tmpArr);
+    tmpX = (num_1 - 2);
+    tmpY = (num_2 + 1);
+    check(tmpX, tmpY);
 
 // четвертый ход
-var tmpArr = [num_1 - 2, num_2 - 1];
-check(tmpArr);
+    tmpX = (num_1 - 2);
+    tmpY = (num_2 - 1 );
+    check(tmpX, tmpY);
 
 // пятый ход
-var tmpArr = [num_1 - 1, num_2 + 2];
-check(tmpArr);
+    tmpX = (num_1 - 1);
+    tmpY = (num_2 + 2);
+    check(tmpX, tmpY);
 
 //шестой  ход
-var tmpArr = [num_1 - 1, num_2 - 2];
-check(tmpArr);
+    tmpX = (num_1 - 1);
+    tmpY = (num_2 - 2);
+    check(tmpX, tmpY);
 
 // седьмой ход
-var tmpArr = [num_1 + 1, num_2 + 2];
-check(tmpArr);
+    tmpX = (num_1 + 1);
+    tmpY = (num_2 + 2);
+    check(tmpX, tmpY);
 
 //восьмой ход
-var tmpArr = [num_1 + 1, num_2 - 2];
-check(tmpArr);
+    tmpX = (num_1 + 1); 
+    tmpY = (num_2 - 2);
+    check(tmpX, tmpY);
 
 alert(answArr.join(' '));
 
