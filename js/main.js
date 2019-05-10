@@ -1,52 +1,55 @@
-/**var result = document.getElementById('button');
-result.addEventListener('click',  generateEmptyBoard); //создадим обработчик
-
-function getN() {
-    var getStart = document.getElementById('num_1').value;
-    //getStart = getStart.split('');
-    
-    return(getStart);
-
-}
-getStart = getN();
-function generateEmptyBoard() {
-    var row = [];
-    for(var i = 0; i < 120; i++) {
-        row.push((i < 20 || i > 100 || !(i % 10) || i % 10 == 9)
-            ? -1
-            : i2an(i));
-    }
-    console.log(row);
-    console.log(row[24]);= n=
-}
-
-// converts an index in the mailbox into its corresponding value in algebraic notation
-function i2an(i) {
-    return("abcdefgh"[(i % 10) - 1] + (10 - Math.floor(i / 10)));
-}
-
-**/
 
 var result = document.getElementById('button');
 result.addEventListener('click',  getN); //создадим обработчик
 var getStart = document.getElementById('num_1').value;
+//считаем стартовую позицию
 function getN() {
     var getStart = document.getElementById('num_1').value;
     getStart = getStart.split('');
-   
-    //var horseArr = [(), getStart[2]];
-if ((getStart[0] != null)&&(getStart[1] != null)) { 
-        x = true;
-    } else {
-     x = false; 
-         c
-}    
-var arr = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
-//console.log(arr.indexOf(6));
-console.log(arr.indexOf('d'));
-       //console.log(horseArr,getStart[1]);
-       //console.log(getStart);
-       //console.log('sdf');
+    var arr = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']; //массив для перевода букв в цифры
+    num_1 = arr.indexOf(getStart[0]);
+    num_2 = parseInt(getStart[1]);
+    var horseArr = [num_1, num_2];
+    var answArr = [];
+    // function for check the turn
+    function check(){
+    if ((tmpArr[0] <= 7)&&(tmpArr[1]<= 8)&&(tmpArr[1] >= 1)&&(tmpArr[0] >= 1)) 
+    { answArr.push(arr[tmpArr[0]] + tmpArr[1]);}}
+
+//первый ход 
+    var tmpArr = [num_1 + 2, num_2 + 1];
+    check(tmpArr);
+
+// второй ход 
+ var tmpArr = [num_1 + 2, num_2 - 1];
+    check(tmpArr);
+
+// третий ход 
+var tmpArr = [num_1 - 2, num_2 + 1];
+check(tmpArr);
+
+// четвертый ход
+var tmpArr = [num_1 - 2, num_2 - 1];
+check(tmpArr);
+
+// пятый ход
+var tmpArr = [num_1 - 1, num_2 + 2];
+check(tmpArr);
+
+//шестой  ход
+var tmpArr = [num_1 - 1, num_2 - 2];
+check(tmpArr);
+
+// седьмой ход
+var tmpArr = [num_1 + 1, num_2 + 2];
+check(tmpArr);
+
+//восьмой ход
+var tmpArr = [num_1 + 1, num_2 - 2];
+check(tmpArr);
+
+console.log(answArr);
+
    }
   
 
