@@ -9,6 +9,9 @@ function getN() {
     var arr = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']; //массив для перевода букв в цифры
     num_1 = arr.indexOf(getStart[0]);
     num_2 = parseInt(getStart[1]);
+    //проверим на всякий случай формат введенных данных
+    if (num_1 === -1){ alert('wrong format'); return 'error';}
+    if ((Number.isNaN(num_2))){alert('wrong format'); return 'error';}
     var answArr = [];
 
 // function for check the turn
@@ -21,43 +24,43 @@ function getN() {
 //первый ход 
     tmpX = (num_1 + 2),
     tmpY = (num_2 + 1);
-    check(tmpX, tmpY);
+    check();
 
 // второй ход 
     tmpX = (num_1 + 2); 
     tmpY = (num_2 - 1);
-    check(tmpX, tmpY);
+    check();
 
 // третий ход 
     tmpX = (num_1 - 2);
     tmpY = (num_2 + 1);
-    check(tmpX, tmpY);
+    check();
 
 // четвертый ход
     tmpX = (num_1 - 2);
     tmpY = (num_2 - 1 );
-    check(tmpX, tmpY);
+    check();
 
 // пятый ход
     tmpX = (num_1 - 1);
     tmpY = (num_2 + 2);
-    check(tmpX, tmpY);
+    check();
 
 //шестой  ход
     tmpX = (num_1 - 1);
     tmpY = (num_2 - 2);
-    check(tmpX, tmpY);
+    check();
 
 // седьмой ход
     tmpX = (num_1 + 1);
     tmpY = (num_2 + 2);
-    check(tmpX, tmpY);
+    check();
 
 //восьмой ход
     tmpX = (num_1 + 1); 
     tmpY = (num_2 - 2);
-    check(tmpX, tmpY);
-
+    check();
+ //выводим массив ответов
 alert(answArr.join(' '));
 
    }
