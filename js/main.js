@@ -1,10 +1,9 @@
 
 var result = document.getElementById('button');
 result.addEventListener('click',  getN); //создадим обработчик
-var getStart = document.getElementById('num_1').value;
 //считаем стартовую позицию
 function getN() {
-    var getStart = document.getElementById('num_1').value;
+    var getStart = document.getElementById('pos').value;
     getStart = getStart.split('');
     var arr = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']; //массив для перевода букв в цифры
     num_1 = arr.indexOf(getStart[0]);
